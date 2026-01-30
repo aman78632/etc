@@ -9,7 +9,7 @@ st.set_page_config(page_title="Iris Classifier", page_icon="❤️")
 @st.cache_resource
 def load_model():
   #update the path to look for the .pkl file
-  model_path="Iris_model.pkl"
+  model_path="iris_model.pkl"
   if os.path.exists(model_path):
     with open(model_path,'rb') as file:
       return pickle.load(file)
@@ -19,7 +19,7 @@ def load_model():
 
 model=load_model()
 # --- UI INTERFACE ---
-st.title("🌸 Iris Species Predictor")
+st.title("🌸 iris Species Predictor")
 st.markdown("""
 This app uses a *Logistic Regression* model to predict the species of an Iris flower 
 based on its physical measurements.
